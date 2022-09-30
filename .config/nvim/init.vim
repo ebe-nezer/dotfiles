@@ -1,5 +1,4 @@
 :set number
-:set autoindent
 :set tabstop=4
 :set shiftwidth=4
 :set smarttab
@@ -7,29 +6,21 @@
 :set mouse=a
 :set autoindent
 :set smartindent
-:set smarttab
-:set shiftwidth=2
-:set softtabstop=2
 :set tabstop=2
 :set expandtab 
 :set guifont=Fira\ Code\ Regular\ 11
-set noswapfile
-set nobackup
-set nowb
+:set noswapfile
+:set nobackup
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
-syntax on
+:syntax on
 
 " ========== Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 if has('persistent_undo')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
-  set undofile
+  :set undodir=~/.vim/backups
+  :set undofile
 endif
 
 call plug#begin()
@@ -62,7 +53,7 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'kchmck/vim-coffee-script'
 
-set encoding=utf8
+:set encoding=utf8
 
 call plug#end()
 
@@ -71,7 +62,7 @@ syntax enable
 autocmd FocusLost * silent! wa " Automatically save file
 
 " theme
-set background=light
+:set background=light
 colorscheme onedark
 
 " importing plugin configuration file
@@ -84,9 +75,9 @@ source ./plugin/vim-jsv.vim
 " importing vim customization
 source ./fonts.vim
 source ./splits.vim
-source ./tabs.vim
+" source ./tabs.vim
 
-set completeopt-=preview " For No Previews
+:set completeopt-=preview " For No Previews
 
 let g:python_host_prog="/usr/bin/python3"
 

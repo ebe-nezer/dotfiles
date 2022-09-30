@@ -10,6 +10,6 @@ map ss <C-W>s
 map Q  <C-W>q
 
 " Open splits on the right and below
-set splitbelow
-set splitright
+:set splitbelow
+:set splitright
 

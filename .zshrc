@@ -20,21 +20,16 @@ alias files="nemo"
 alias files.="nemo ."
 alias help="cat ~/.zshrc | less"
 alias q="exit"
-alias src="source /home/ebenezer/.zshrc"
-alias vsc="code ."
-alias vscd="code"
-alias modalac="nvim ~/.config/alacritty"
+alias src="source /home/ebenezer/.zshrc" 
+alias cedit="nvim ~/.config/nvim/" # To edit NEOVIM
+alias tedit="nvim ~/.config/kitty/" # To Edit Kitty Terminal
 
-alias edit="nvim ~/.config/kitty"
 # cd
 alias ..="cd .."
 alias ....="cd ../.."
-alias ......="cd ../../.."
-alias ........="cd ../../../.."
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias dots='/usr/bin/git --git-dir=/home/ebenezer/.cfg/ --work-tree=/home/ebenezer'
+alias config='/usr/bin/git --git-dir=/home/ebenezer/.cfg/ --work-tree=/home/ebenezer'
