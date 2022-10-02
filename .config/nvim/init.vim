@@ -8,14 +8,19 @@
 :set smartindent
 :set tabstop=2
 :set expandtab 
+:set nocompatible
 :set guifont=Fira\ Code\ Regular\ 11
 :set noswapfile
 :set nobackup
 :syntax on
-
+:set nocompatible
+:set encoding=utf-8
+filetype plugin on
+filetype indent on
 " ========== Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
+
 if has('persistent_undo')
   :silent !mkdir ~/.vim/backups > /dev/null 2>&1
   :set undodir=~/.vim/backups
@@ -25,7 +30,7 @@ endif
 call plug#begin()
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'windwp/nvim-autopairs' "
+Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-surround' " Surrounding ysw)
 Plug 'preservim/nerdtree' " NerdTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -41,12 +46,16 @@ Plug 'lambdalisue/suda.vim/' " Sudo
 Plug 'tribela/vim-transparent'
 Plug 'alvan/vim-closetag'
 Plug 'folke/zen-mode.nvim'
+Plug 'sheerun/vim-polyglot'
+
 " Plug 'craigemery/vim-autotag'
 " Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }"Prettier
-Plug 'tc50cal/vim-terminal' " Vim Terminal
+
+" Vim Terminal
+Plug 'tc50cal/vim-terminal' 
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -67,27 +76,26 @@ lua << EOF
 require("nvim-autopairs").setup {}
 EOF
 
-syntax enable
+:syntax enable
 
-autocmd FocusLost * silent! wa " Automatically save file
+autocmd FocusLost * silent! wa
 
-" theme
 :set background=light
-colorscheme onedark
+:colorscheme onedark
 
-" importing plugin configuration file
-:source ./plugged/coc.vim
-:source ./plugged/nerdtree.vim
-:source ./plugged/tagbar.vim
-:source ./plugged/vim-fugitive.vim
-:source ./plugged/vim-jsv.vim
+:source ~/.config/nvim/plugged/coc.vim
+:source ~/.config/nvim/plugged/nerdtree.vim
+:source ~/.config/nvim/plugged/tagbar.vim
+:source ~/.config/nvim/plugged/vim-fugitive.vim
+:source ~/.config/nvim/plugged/vim-jsv.vim
 
-" importing vim customization
-:source ./fonts.vim
-:source ./splits.vim
-:source ./tabs.vim
+" importing vim customization "
+:source ~/.config/nvim/fonts.vim
+:source ~/.config/nvim/splits.vim
+:source ~/.config/nvim/tabs.vim
 
-:set completeopt-=preview " For No Previews
-
+:set completeopt-=preview 
+" For No Previews
+"
 let g:python_host_prog="/usr/bin/python3"
 
