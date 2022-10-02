@@ -18,13 +18,15 @@
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 if has('persistent_undo')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  :silent !mkdir ~/.vim/backups > /dev/null 2>&1
   :set undodir=~/.vim/backups
   :set undofile
 endif
 
 call plug#begin()
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'windwp/nvim-autopairs' "
 Plug 'tpope/vim-surround' " Surrounding ysw)
 Plug 'preservim/nerdtree' " NerdTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -38,7 +40,10 @@ Plug 'preservim/tagbar' " Tagbar for code navigation
 Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'lambdalisue/suda.vim/' " Sudo
 Plug 'tribela/vim-transparent'
-Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'folke/zen-mode.nvim'
+" Plug 'craigemery/vim-autotag'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }"Prettier
@@ -57,6 +62,14 @@ Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
+lua << EOF
+  require("zen-mode").setup {}
+EOF
+
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
+
 syntax enable
 
 autocmd FocusLost * silent! wa " Automatically save file
@@ -66,16 +79,16 @@ autocmd FocusLost * silent! wa " Automatically save file
 colorscheme onedark
 
 " importing plugin configuration file
-source ./plugin/coc.vim
-source ./plugin/nerdtree.vim
-source ./plugin/tagbar.vim
-source ./plugin/vim-fugitive.vim
-source ./plugin/vim-jsv.vim
+:source ./plugin/coc.vim
+:source ./plugin/nerdtree.vim
+:source ./plugin/tagbar.vim
+:source ./plugin/vim-fugitive.vim
+:source ./plugin/vim-jsv.vim
 
 " importing vim customization
-source ./fonts.vim
-source ./splits.vim
-" source ./tabs.vim
+:source ./fonts.vim
+:source ./splits.vim
+:source ./tabs.vim
 
 :set completeopt-=preview " For No Previews
 

@@ -9,17 +9,17 @@ end
 " Press Ctrl-Tab to switch between open tabs (like browser tabs) to 
 " the right side. Ctrl-Shift-Tab goes the other way.
 noremap <C-Tab> :tabnext<CR>
-noremap <C-S-Tab> :tabprev<CR>
+noremap <C-S-Tab> :tabprevious<CR>
 
   " Switch to specific tab numbers with Command-number
-noremap <D-1> :tabn 1<CR>
-noremap <D-2> :tabn 2<CR>
-noremap <D-3> :tabn 3<CR>
-noremap <D-4> :tabn 4<CR>
-noremap <D-5> :tabn 5<CR>
-noremap <D-6> :tabn 6<CR>
-noremap <D-7> :tabn 7<CR>
-noremap <D-8> :tabn 8<CR>
-noremap <D-9> :tabn 9<CR>
+noremap <A-1> :tabnew 1<CR>
+noremap <A-2> :tabnew 2<CR>
+noremap <A-3> :tabnew 3<CR>
+noremap <A-4> :tabnew 4<CR>
+noremap <A-5> :tabnew 5<CR>
+noremap <A-6> :tabnew 6<CR>
+noremap <A-7> :tabnew 7<CR>
+noremap <A-8> :tabnew 8<CR>
+noremap <A-9> :tabnew 9<CR>
 " Command-0 goes to the last tab
 
