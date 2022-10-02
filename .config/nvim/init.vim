@@ -11,7 +11,6 @@
 :set guifont=Fira\ Code\ Regular\ 11
 :set noswapfile
 :set nobackup
-
 :syntax on
 
 " ========== Persistent Undo ==================
@@ -58,8 +57,6 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'kchmck/vim-coffee-script'
 
-:set encoding=utf8
-
 call plug#end()
 
 lua << EOF
@@ -79,11 +76,11 @@ autocmd FocusLost * silent! wa " Automatically save file
 colorscheme onedark
 
 " importing plugin configuration file
-:source ./plugin/coc.vim
-:source ./plugin/nerdtree.vim
-:source ./plugin/tagbar.vim
-:source ./plugin/vim-fugitive.vim
-:source ./plugin/vim-jsv.vim
+:source ./plugged/coc.vim
+:source ./plugged/nerdtree.vim
+:source ./plugged/tagbar.vim
+:source ./plugged/vim-fugitive.vim
+:source ./plugged/vim-jsv.vim
 
 " importing vim customization
 :source ./fonts.vim

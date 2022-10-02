@@ -23,7 +23,7 @@ alias q="exit"
 alias src="source /home/ebenezer/.zshrc" 
 
 # customization
-alias cedit="nvim ~/.config/nvim/" # To edit NEOVIM
+alias cedit="cd ~/.config/nvim && nvim ." # To edit NEOVIM
 alias tedit="nvim ~/.config/kitty/" # To Edit Kitty Terminal
 alias zedit="nvim $HOME/.zshrc"
 
@@ -48,6 +48,7 @@ alias add="config add" # add files
 alias commit="config commit -m"
 alias push="config push"
 alias status="config status"
+
 # android path
 export ANDROID_HOME=$HOME/android
 export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
