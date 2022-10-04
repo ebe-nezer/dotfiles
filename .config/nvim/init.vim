@@ -15,8 +15,12 @@
 :syntax on
 :set nocompatible
 :set encoding=utf-8
-filetype plugin on
+" filetype plugin on
 filetype indent on
+:syntax enable
+
+:set completeopt-=preview 
+
 " ========== Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
@@ -47,7 +51,7 @@ Plug 'tribela/vim-transparent'
 Plug 'alvan/vim-closetag'
 Plug 'folke/zen-mode.nvim'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'mbbill/undotree' " Undo Mapper 
 " Plug 'craigemery/vim-autotag'
 " Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -60,42 +64,35 @@ Plug 'tc50cal/vim-terminal'
 " Git
 Plug 'tpope/vim-fugitive'
 
-" Javascript
+" Javascript 
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'kchmck/vim-coffee-script'
 
+
 call plug#end()
-
-lua << EOF
-  require("zen-mode").setup {}
-EOF
-
-lua << EOF
-require("nvim-autopairs").setup {}
-EOF
-
-:syntax enable
-
-autocmd FocusLost * silent! wa
 
 :set background=light
 :colorscheme onedark
 
-:source ~/.config/nvim/plugged/coc.vim
+lua << EOF
+  require("zen-mode").setup {}
+  require("nvim-autopairs").setup {}
+EOF
+
+autocmd FocusLost * silent! wa
+ 
+For No Previews
+
+let g:python_host_prog="/usr/bin/python3"
+
 :source ~/.config/nvim/plugged/nerdtree.vim
 :source ~/.config/nvim/plugged/tagbar.vim
 :source ~/.config/nvim/plugged/vim-fugitive.vim
 :source ~/.config/nvim/plugged/vim-jsv.vim
-
-" importing vim customization "
 :source ~/.config/nvim/fonts.vim
 :source ~/.config/nvim/splits.vim
 :source ~/.config/nvim/tabs.vim
 
-:set completeopt-=preview 
-" For No Previews
-"
-let g:python_host_prog="/usr/bin/python3"
 

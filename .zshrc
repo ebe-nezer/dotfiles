@@ -1,4 +1,8 @@
+# variable
+EDITOR="nvim"
 ZSH="$HOME/.oh-my-zsh"
+
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(git)
@@ -21,10 +25,11 @@ alias files.="nemo ."
 alias help="cat ~/.zshrc | less"
 alias q="exit"
 alias src="source /home/ebenezer/.zshrc" 
+alias internet="ping google.com"
 
 # customization
-alias cedit="cd ~/.config/nvim && nvim ." # To edit NEOVIM
-alias tedit="nvim ~/.config/kitty/" # To Edit Kitty Terminal
+alias cedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
+alias tedit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal
 alias zedit="nvim $HOME/.zshrc"
 
 # package manager
