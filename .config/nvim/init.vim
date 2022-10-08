@@ -15,10 +15,9 @@
 :syntax on
 :set nocompatible
 :set encoding=utf-8
-" filetype plugin on
+filetype plugin on
 filetype indent on
 :syntax enable
-
 :set completeopt-=preview 
 
 " ========== Persistent Undo ==================
@@ -83,14 +82,14 @@ EOF
 
 autocmd FocusLost * silent! wa
  
-For No Previews
-
 let g:python_host_prog="/usr/bin/python3"
 
+:source ~/.config/nvim/plugged/coc.vim
 :source ~/.config/nvim/plugged/nerdtree.vim
 :source ~/.config/nvim/plugged/tagbar.vim
 :source ~/.config/nvim/plugged/vim-fugitive.vim
 :source ~/.config/nvim/plugged/vim-jsv.vim
+:source ~/.config/nvim/plugged/undotree.vim
 :source ~/.config/nvim/fonts.vim
 :source ~/.config/nvim/splits.vim
 :source ~/.config/nvim/tabs.vim

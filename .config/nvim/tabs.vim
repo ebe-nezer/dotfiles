@@ -8,8 +8,8 @@ end
 
 " Press Ctrl-Tab to switch between open tabs (like browser tabs) to 
 " the right side. Ctrl-Shift-Tab goes the other way.
-noremap <C-Tab> :tabnext<CR>
-noremap <C-S-Tab> :tabprevious<CR>
+noremap <C-S> :tabnext<CR>
+noremap <C-A> :tabprevious<CR>
 
   " Switch to specific tab numbers with Command-number
 noremap <A-1> :tabnew 1<CR>
