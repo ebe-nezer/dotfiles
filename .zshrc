@@ -26,7 +26,7 @@ alias help="cat ~/.zshrc | less"
 alias q="exit"
 alias src="source /home/ebenezer/.zshrc" 
 alias internet="ping google.com"
-
+alias off="poweroff"
 # customization
 alias cedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
 alias tedit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal

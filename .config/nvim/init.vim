@@ -1,12 +1,11 @@
 :set number
-:set tabstop=4
+:set tabstoap=4
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
 :set mouse=a
 :set autoindent
 :set smartindent
-:set tabstop=2
 :set expandtab 
 :set nocompatible
 :set guifont=Fira\ Code\ Regular\ 11
@@ -15,10 +14,10 @@
 :syntax on
 :set nocompatible
 :set encoding=utf-8
-filetype plugin on
-filetype indent on
+:filetype plugin on
+:filetype indent on
 :syntax enable
-:set completeopt-=preview 
+:set completeopt-=preview
 
 " ========== Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -72,7 +71,7 @@ Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
-:set background=light
+:set background=dark
 :colorscheme onedark
 
 lua << EOF
@@ -81,10 +80,11 @@ lua << EOF
 EOF
 
 autocmd FocusLost * silent! wa
- 
-let g:python_host_prog="/usr/bin/python3"
 
-:source ~/.config/nvim/plugged/coc.vim
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+:source ~/.config/nvim/plugged/coc.vma
 :source ~/.config/nvim/plugged/nerdtree.vim
 :source ~/.config/nvim/plugged/tagbar.vim
 :source ~/.config/nvim/plugged/vim-fugitive.vim
@@ -94,4 +94,4 @@ let g:python_host_prog="/usr/bin/python3"
 :source ~/.config/nvim/splits.vim
 :source ~/.config/nvim/tabs.vim
 
-
+let g:python_host_prog="/usr/bin/python3"
