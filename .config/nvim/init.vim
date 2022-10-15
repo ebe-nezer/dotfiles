@@ -1,5 +1,5 @@
 :set number
-:set tabstoap=4
+:set tabstop=4
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
@@ -84,7 +84,7 @@ autocmd FocusLost * silent! wa
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-:source ~/.config/nvim/plugged/coc.vma
+:source ~/.config/nvim/plugged/coc.vim
 :source ~/.config/nvim/plugged/nerdtree.vim
 :source ~/.config/nvim/plugged/tagbar.vim
 :source ~/.config/nvim/plugged/vim-fugitive.vim

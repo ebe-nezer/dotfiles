@@ -4,7 +4,7 @@ ZSH="$HOME/.oh-my-zsh"
 
 
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="agnoster"
+ZSH_THEME="cloud"
 plugins=(git)
 
 ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
@@ -17,7 +17,7 @@ source "$ZSH"/oh-my-zsh.sh
 # other
 alias nv="nvim"
 alias la="ls -alF"
-alias h="history|grep"
+alias h="history | grep"
 alias c="clear" # I know about ctrl l etc.
 alias logout="killall -KILL -u $USER"
 alias files="nemo"
@@ -27,6 +27,7 @@ alias q="exit"
 alias src="source /home/ebenezer/.zshrc" 
 alias internet="ping google.com"
 alias off="poweroff"
+
 # customization
 alias cedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
 alias tedit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal
