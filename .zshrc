@@ -32,7 +32,7 @@ alias off="poweroff"
 alias cedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
 alias tedit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal
 alias zedit="nvim $HOME/.zshrc"
-
+alias iedit="cd ~/.config/i3 && nvim ."
 # package manager
 alias update="yay -Syu"
 alias yremove="yay -Rucns"

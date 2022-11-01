@@ -3,3 +3,5 @@
 	email = ebenezerebi500@gmail.com
 [init]
 	defaultBranch = master
+[protocol "file"]
+	allow = always
