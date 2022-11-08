@@ -34,23 +34,37 @@ call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-surround' " Surrounding ysw)
-Plug 'preservim/nerdtree' " NerdTree
+
+" NerdTree
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'vim-airline/vim-airline' " Status bar
-Plug 'ap/vim-css-color' " CSS Color Preview
+
+" Commenting gcc & gc
+Plug 'tpope/vim-commentary'
+
+"Status Bar - Airline
+Plug 'vim-airline/vim-airline'
+
+" Color Preview
+Plug 'ap/vim-css-color' "
+
+" ColorScheme
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'neoclide/coc.nvim'  " Auto Completion
-Plug 'ryanoasis/vim-devicons' " Developer Icons
+
+" COC
+Plug 'neoclide/coc.nvim'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'preservim/tagbar' " Tagbar for code navigation
-Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'lambdalisue/suda.vim/' " Sudo
 Plug 'tribela/vim-transparent'
 Plug 'alvan/vim-closetag'
 Plug 'folke/zen-mode.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mbbill/undotree' " Undo Mapper 
-" Plug 'craigemery/vim-autotag'
+
 " Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
@@ -59,6 +73,13 @@ Plug 'prettier/vim-prettier', {
 " Vim Terminal
 Plug 'tc50cal/vim-terminal' 
 
+" Dart
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+Plug 'dart-lang/dart-vim-plugin'
+
+" Flutter
+Plug 'thosakwe/vim-flutter'
 " Git
 Plug 'tpope/vim-fugitive'
 
@@ -68,6 +89,10 @@ Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'kchmck/vim-coffee-script'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'natebosch/dartlang-snippets'
 
 call plug#end()
 
