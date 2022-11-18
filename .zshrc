@@ -2,7 +2,6 @@
 EDITOR="nvim"
 ZSH="$HOME/.oh-my-zsh"
 
-
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="cloud"
 plugins=(git)
@@ -29,20 +28,21 @@ alias internet="ping google.com"
 alias off="poweroff"
 
 # customization
-alias cedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
-alias tedit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal
-alias zedit="nvim $HOME/.zshrc"
-alias iedit="cd ~/.config/i3 && nvim ."
+alias nvimedit="cd ~/.config/nvim && $EDITOR ." # To edit NEOVIM
+alias terminaledit="cd ~/.config/kitty && $EDITOR ." # To Edit Kitty Terminal
+alias zshedit="nvim $HOME/.zshrc"
+
 # package manager
-alias update="yay -Syu"
-alias yremove="yay -Rucns"
-alias ystats="yay -Ps"
+alias update="yay -Syuu && sudo pacman -Syuu"
+alias remove="yay -Rucns"
+alias stats="yay -Ps"
 alias clean="yay -Yc"
 alias install="yay -S"
 
 # cd
 alias ..="cd .."
 alias ....="cd ../.."
+alias ......="cd ../../.."
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -55,9 +55,11 @@ alias commit="config commit -m"
 alias push="config push"
 alias status="config status"
 
-# android path
-export ANDROID_HOME=$HOME/android
-export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
-export PATH=$ANDROID_HOME/emulator/:$PATH
-export PATH=$ANDROID_HOME/platform-tools/:$PATH
+export CHROME_EXECUTABLE='/usr/bin/google-chrome-stable'
+export JAVA_HOME='/usr/lib/jvm/default'
+export PATH=$JAVA_HOME/bin:$PATH
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/:$PATH
+export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
+export PATH=$ANDROID_SDK_ROOT/platform-tools/:$PATH
 export PATH=$PATH:/opt/glassfish/bin

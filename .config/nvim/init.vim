@@ -118,5 +118,6 @@ let g:prettier#autoformat_require_pragma = 0
 :source ~/.config/nvim/fonts.vim
 :source ~/.config/nvim/splits.vim
 :source ~/.config/nvim/tabs.vim
+:source ~/.config/nvim/plugged/vim-lsc.vim
 
 let g:python_host_prog="/usr/bin/python3"

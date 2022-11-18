@@ -5,3 +5,5 @@
 	defaultBranch = master
 [protocol "file"]
 	allow = always
+[safe]
+	directory = /opt/flutter
