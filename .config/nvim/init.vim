@@ -1,3 +1,4 @@
+:set encoding=UTF-8
 :set number
 :set tabstop=4
 :set shiftwidth=4
@@ -29,7 +30,7 @@ if has('persistent_undo')
   :set undofile
 endif
 
-call plug#begin()
+call plug#begin('C:/Users/acer/AppData/Local/nvim/plugged')
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'windwp/nvim-autopairs'
@@ -52,7 +53,7 @@ Plug 'ap/vim-css-color' "
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 
 " COC
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
@@ -65,7 +66,6 @@ Plug 'folke/zen-mode.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mbbill/undotree' " Undo Mapper 
 
-" Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }"Prettier
@@ -94,10 +94,13 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'natebosch/dartlang-snippets'
 
+" Intendation
+Plug 'nathanaelkane/vim-indent-guides'
+
 call plug#end()
 
 :set background=dark
-:colorscheme onedark
+:colorscheme sonokai
 
 lua << EOF
   require("zen-mode").setup {}
@@ -109,15 +112,16 @@ autocmd FocusLost * silent! wa
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-:source ~/.config/nvim/plugged/coc.vim
-:source ~/.config/nvim/plugged/nerdtree.vim
-:source ~/.config/nvim/plugged/tagbar.vim
-:source ~/.config/nvim/plugged/vim-fugitive.vim
-:source ~/.config/nvim/plugged/vim-jsv.vim
-:source ~/.config/nvim/plugged/undotree.vim
-:source ~/.config/nvim/fonts.vim
-:source ~/.config/nvim/splits.vim
-:source ~/.config/nvim/tabs.vim
-:source ~/.config/nvim/plugged/vim-lsc.vim
+:source ~/AppData/Local/nvim/plugged/coc.vim
+:source ~/AppData/Local/nvim/plugged/nerdtree.vim
+:source ~/AppData/Local/nvim/plugged/tagbar.vim
+:source ~/AppData/Local/nvim/plugged/vim-fugitive.vim
+:source ~/AppData/Local/nvim/plugged/vim-jsv.vim
+:source ~/AppData/Local/nvim/plugged/undotreee.vim
+:source ~/AppData/Local/nvim/fonts.vim
+:source ~/AppData/Local/nvim/splits.vim
+:source ~/AppData/Local/nvim/tabs.vim
+:source ~/AppData/Local/nvim/plugged/vim-lsc.vim
+:source ~/AppData/Local/nvim/plugged/vim-indent-guide.vim
 
-let g:python_host_prog="/usr/bin/python3"
+let g:python_host_prog="C://Python311"
